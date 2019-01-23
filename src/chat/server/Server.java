@@ -14,11 +14,10 @@ import chat.server.ServerThread;
 
 
 public class Server {
-    //? œ?‘ ?ˆœ?„œ 1. ServerSocket ?„ ?–¸?•˜ê³? ?ƒ?„±?•œ?‹¤.
     private ServerSocket ss;
-    // 2-1?„ ?œ„?•œ ?„ ?–¸
+
     private ArrayList<ServerThread> cList;
-    // Thread Group?„ ê´?ë¦¬í•˜ê¸? ?œ„?•œ pool
+
     private ExecutorService executorService;
     
     public Server() {
@@ -28,7 +27,8 @@ public class Server {
             cList = new ArrayList <>();
             executorService = Executors.newFixedThreadPool(3);
         } catch (IOException ex) {
-            System.out.println("?´ë¯? ?‚¬?š©ì¤‘ì¸ port?…?‹ˆ?‹¤.");
+            System.out.println("¼­¹ö ½ÇÇà ½ÇÆĞ!");
+            ex.printStackTrace();
         }
     }
 

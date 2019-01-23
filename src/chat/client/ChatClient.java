@@ -37,9 +37,6 @@ public class ChatClient extends JFrame{
 	JList<String> chatters;
 	private DefaultListModel<String> nicknames;
 	
-	
-//	private Socket sock;
-//	private PrintWriter pw;
 	private ServerConnector connector;
 	
 	public ChatClient() {
